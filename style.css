@@ -67,7 +67,7 @@ hr, .seperators{
 #info-content, #hobbie-content{
     width: 70%;
     margin: 10px 50px 10px 0px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     transition: transform 500ms ease-in-out ,background-color 500ms ease-in-out, background-image 500ms ease-in-out;
 } 
 
