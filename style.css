@@ -7,10 +7,14 @@
 body{
     background-color: var(--color-background);
     color: var(--color-para);
+    padding: 0px;
 }
 h1 ,h2, h3{
     font-family:'Times New Roman', Times, serif;
     color: var(--color-heading);
+}
+p{
+    cursor: default;
 }
 .pfp{
     height: 100px;
@@ -22,7 +26,9 @@ h1 ,h2, h3{
     align-items: center;
     justify-content: space-between;
 }
-hr{
+hr, .seperators{
+    text-align: center;
+    color: var(--color-highlight);
     border-color: var(--color-highlight);
     width: auto;
     margin: 25px 50px;
@@ -35,26 +41,78 @@ hr{
     height: 5px;
     margin: 10px 50px;
 }
-.content#info{
-    display: grid;
-    grid-template-columns: 20% 1fr;
-    gap: 20px;
+.content#info, .content#hobbies{
+    display: flex;
+    width: 100vw;
+    height: 50%vh;
 }
+
 .content > div{
     border: 5px var(--color-highlight);
     width: auto;
     border-style: double;
     text-align: center;
     padding: 20px 50px;
+    
 }
-.content > div#info-head{
+.content > div#info-head, div#hobbie-head{
+    width: 12%;
     font-size: large;
     font-style: italic;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 0px 10px 20px;
 }
+#info-content, #hobbie-content{
+    width: 70%;
+    margin: 10px 50px 10px 0px;
+    padding-bottom: 20px;
+    transition: transform 500ms ease-in-out ,background-color 500ms ease-in-out, background-image 500ms ease-in-out;
+} 
 
 #info-content:hover{
-    transform: scale(1.03);
+    transform: scale(1.08);
+    background-color: var(--color-background);
 }
+#hobbie-content:hover{
+    transform: scale(1.08);
+    background-color: var(--color-background);
+    
+}
+#gogym-trigger{
+    position: absolute;
+    height: 1px;
+    z-index: 1;
+    /*👉border: none;👈*/
+    left: 57%;
+    top: 91%;
+}
+#gogym-trigger:hover + #hobbie-content{
+    transform: scale(1.08);
+    background-color: var(--color-background);
+    background-image: url(kdktI0.gif) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+}
+
+#freak-trigger::before{
+    content:"☼ Study by day ☼";
+    opacity: 1;
+}
+#freak-trigger:hover::before{
+    content: "👅 𝓯𝓻𝓮𝓪𝓴 by night 👅";
+    animation: opacity 500ms ease-in-out;
+    opacity: 1;
+}  
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
