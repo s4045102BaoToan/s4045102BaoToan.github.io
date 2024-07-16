@@ -84,7 +84,7 @@ hr, .seperators{
     position: absolute;
     height: 1px;
     z-index: 1;
-    /*👉border: none;👈*/
+    border: none;
     left: 57%;
     top: 91%;
 }
